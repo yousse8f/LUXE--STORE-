@@ -1,0 +1,26 @@
+import { Product } from '../types';
+
+export const PRODUCTS: Product[] = [
+  { id: 1, name: 'Silk Draped Blouse', price: 420, category: 'Apparel', image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=800', description: 'Hand-woven Italian silk with a subtle sheen.' },
+  { id: 2, name: 'Midnight Sculpt Coat', price: 1250, category: 'Outerwear', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800', description: 'Structured wool blend for a timeless silhouette.' },
+  { id: 3, name: 'Minimalist Tote', price: 850, category: 'Accessories', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800', description: 'Grainy leather finished with gold hardware.' },
+  { id: 4, name: 'Serene No. 5', price: 180, category: 'Fragrance', image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800', description: 'Notes of Hinoki, Cedarwood, and Citrus.' },
+  { id: 5, name: 'Wool Tapered Trouser', price: 380, category: 'Apparel', image: 'https://images.unsplash.com/photo-1475178626620-a4d074967452?auto=format&fit=crop&q=80&w=800', description: 'Ethically sourced Merino wool, tailored for comfort.' },
+  { id: 7, name: 'Linen Summer Shirt', price: 290, category: 'Apparel', image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800', description: 'Breathable Belgian linen in a relaxed fit.' },
+  { id: 8, name: 'Artisan Glass Vase', price: 240, category: 'Home', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=800', description: 'Mouth-blown glass with a textured finish.' },
+  { id: 9, name: 'Velvet Slip Dress', price: 550, category: 'Apparel', image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=800', description: 'Rich deep velvet for evening elegance.' },
+  { id: 11, name: 'Sable Suede Boots', price: 780, category: 'Footwear', image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800', description: 'Premium Italian suede with a cushioned sole.' },
+  { id: 12, name: 'Marble Bookends', price: 320, category: 'Home', image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=800', description: 'Solid Carrara marble cut in geometric forms.' },
+  { id: 14, name: 'Ceramic Serving Bowl', price: 160, category: 'Home', image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=800', description: 'Hand-glazed stoneware from a studio in Kyoto.' },
+  { id: 17, name: 'Oversized Wool Scarf', price: 230, category: 'Accessories', image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800', description: 'Heavyweight lambswool from the Scottish Highlands.' },
+  { id: 18, name: 'Crystal Incense Holder', price: 95, category: 'Fragrance', image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=800', description: 'Hand-cut quartz base for sensory moments.' },
+  { id: 19, name: 'Classic Black Hoodie', price: 180, category: 'Apparel', image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=800', description: 'Premium cotton blend hoodie with relaxed fit.' },
+  { id: 20, name: 'Oversized Gray Sweatshirt', price: 160, category: 'Apparel', image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800', description: 'Comfortable fleece-lined sweatshirt for everyday wear.' },
+  { id: 22, name: 'Minimalist White Hoodie', price: 175, category: 'Apparel', image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&q=80&w=800', description: 'Clean design hoodie in premium organic cotton.' },
+  { id: 6, name: 'Cashmere Blend Sweater', price: 450, category: 'Apparel', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=800', description: 'Luxurious cashmere blend for ultimate comfort.' },
+  { id: 10, name: 'Leather Crossbody Bag', price: 680, category: 'Accessories', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800', description: 'Genuine leather with adjustable strap.' },
+  { id: 13, name: 'Silk Scarf Collection', price: 120, category: 'Accessories', image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&q=80&w=800', description: 'Printed silk scarf with artistic patterns.' },
+  { id: 15, name: 'Wool Winter Coat', price: 980, category: 'Outerwear', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800', description: 'Heavy wool coat with tailored fit.' },
+  { id: 16, name: 'Designer Sunglasses', price: 320, category: 'Accessories', image: 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&q=80&w=800', description: 'UV protection with elegant design.' },
+  { id: 21, name: 'Perfume Discovery Set', price: 150, category: 'Fragrance', image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800', description: 'Sample collection of signature scents.' },
+];

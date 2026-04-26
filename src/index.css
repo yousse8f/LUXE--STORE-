@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+
+  --color-brand-bg: #FDFCF8;
+  --color-brand-ink: #2D2926;
+  --color-brand-accent: #5A5A40; /* Muted Olive */
+  --color-brand-muted: #EAE8E2;
+  --color-brand-accent-text: #FDFCF8;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, .serif {
+    @apply font-serif;
+  }
+}
+
+.glass-header {
+  @apply sticky top-0 z-50 backdrop-blur-md bg-brand-bg/85 border-b border-brand-ink/5;
+}
+
+.btn-premium {
+  @apply px-8 py-3 rounded-full bg-brand-ink text-brand-bg font-bold text-[11px] uppercase tracking-[0.2em] transition-all duration-300 hover:bg-brand-accent hover:text-white hover:scale-[1.02] active:scale-[0.98];
+}
+
+.product-card-mask {
+  @apply relative overflow-hidden bg-brand-muted aspect-[4/5] rounded-2xl;
+}
+
+.product-card-mask img {
+  @apply object-cover w-full h-full transition-transform duration-1000 ease-out hover:scale-105;
+}
+
+.nav-link {
+  @apply text-[11px] uppercase tracking-[0.25em] font-medium opacity-60 hover:opacity-100 transition-opacity;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .product-card-mask {
+    @apply aspect-[3/4];
+  }
+  
+  .glass-header {
+    @apply px-4;
+  }
+}
+
+/* Touch-friendly buttons */
+.btn-touch {
+  @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+}
+
+/* Ensure proper viewport on mobile */
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+  maximum-scale: 1;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  @apply overflow-x-hidden;
+}
+
+/* Better touch targets */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Product image fallback */
+.product-card-mask img {
+  @apply object-cover w-full h-full transition-transform duration-1000 ease-out hover:scale-105;
+}
+
+/* Text truncation for long product names */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Ensure consistent product card heights */
+.product-card {
+  @apply flex flex-col h-full;
+}
+
+.product-card .product-card-mask {
+  @apply flex-shrink-0;
+}
+
+.product-card .product-info {
+  @apply flex-grow;
+}
+
+/* Touch device hover support */
+@media (hover: hover) {
+  .product-card .product-card-mask button {
+    @apply opacity-0 translate-y-4;
+  }
+  
+  .product-card:hover .product-card-mask button {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .product-card:hover .product-card-mask img {
+    @apply scale-110;
+  }
+}
+
+/* Touch device active states */
+@media (hover: none) {
+  .product-card .product-card-mask button {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .product-card:active .product-card-mask img {
+    @apply scale-105;
+  }
+}
+
+/* Enhanced touch support for all interactive elements */
+@media (hover: none) {
+  /* Hero section hover effects */
+  .group:active img {
+    @apply scale-105 transition-transform duration-300;
+  }
+  
+  /* Button active states */
+  button:active {
+    @apply scale-95 transition-transform duration-150;
+  }
+  
+  /* Join the Club section */
+  .group:active .w-16 {
+    @apply bg-brand-accent text-white scale-110 transition-all duration-300;
+  }
+  
+  /* All group hover states become active states on touch */
+  .group:active .group-hover\:scale-105 {
+    @apply scale-105;
+  }
+  
+  .group:active .group-hover\:bg-brand-accent {
+    @apply bg-brand-accent;
+  }
+  
+  .group:active .group-hover\:text-white {
+    @apply text-white;
+  }
+  
+  .group:active .group-hover\:scale-110 {
+    @apply scale-110;
+  }
+}
+
+/* Mobile-specific enhancements */
+@media (max-width: 640px) {
+  /* Ensure all buttons are properly sized for touch */
+  button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Add visual feedback for touch */
+  button:active {
+    @apply brightness-95;
+  }
+  
+  /* Make product cards more touch-friendly */
+  .product-card {
+    @apply cursor-pointer;
+  }
+  
+  /* Ensure text is readable on mobile */
+  .text-xs {
+    @apply text-[11px];
+  }
+  
+  .text-sm {
+    @apply text-[13px];
+  }
+}
